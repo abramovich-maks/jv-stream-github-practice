@@ -20,7 +20,7 @@ public class CandidateValidator implements Predicate<Candidate> {
         if (!candidate.isAllowedToVote()) {
             return false;
         }
-        return calculateTotalPeriod(candidate) > PERIOD_LIVE;
+        return calculateTotalPeriod(candidate) >= PERIOD_LIVE;
     }
 
     private static int calculateTotalPeriod(final Candidate candidate) {
